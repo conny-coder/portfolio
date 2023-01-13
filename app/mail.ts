@@ -17,7 +17,7 @@ export default async function postMail(
   })
 
   const mailData: Options = {
-    from: 'user@gmail.com',
+    from: 'kostia.shkambula@gmail.com',
     to: 'kostia.shkambula@gmail.com',
     subject: `Message From ${req.body.name}`,
     html: `<div>
