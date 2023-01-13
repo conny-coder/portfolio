@@ -13,7 +13,7 @@ const nextConfig = {
           },
           {
             key: 'Access-Control-Allow-Headers',
-            value: 'X-Requested-With',
+            value: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
           },
         ],
       },
