@@ -1,0 +1,29 @@
+.title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: bold;
+  line-height: normal;
+  margin-bottom: 45px;
+  letter-spacing: 2px;
+  color: transparent;
+  background-image: linear-gradient(90deg, #fff, rgba(255, 56, 80, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 300px 300px;
+  background-position: 0 0;
+  animation: bp 2s infinite linear;
+
+  @media (max-width: 600px) {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+}
+
+@keyframes bp {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: 300px;
+  }
+}

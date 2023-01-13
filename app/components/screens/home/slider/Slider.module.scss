@@ -1,0 +1,85 @@
+.slider-block {
+  @apply mb-24;
+
+  @media (max-width: 600px) {
+    margin-bottom: 50px;
+  }
+
+  .slide {
+    border-radius: 1rem;
+    overflow: hidden;
+    // box-shadow: 0 0 15px #515458;
+
+    @media (max-width: 600px) {
+      margin-left: 10px !important;
+      width: calc(100% - 20px) !important;
+      margin-right: 30px !important;
+    }
+
+    &:first-child {
+      margin-left: 2vw;
+    }
+
+    .item {
+      @apply h-96;
+
+      > img {
+        height: 100%;
+        width: 100% !important;
+      }
+
+      @media (max-width: 1200px) {
+        @apply h-80;
+      }
+
+      @media (max-width: 900px) {
+        @apply h-60;
+      }
+
+      .inform {
+        @apply absolute z-10 left-6 top-4 right-6 bottom-4;
+
+        > div:first-child {
+          @apply font-bold text-3xl mb-1;
+        }
+
+        > div:not(.links) {
+          text-shadow: 0 0 5px #000;
+        }
+
+        > div {
+          @apply text-white;
+        }
+
+        .links {
+          @apply absolute bottom-0 gap-2 flex;
+
+          > a {
+            @apply text-black cursor-pointer p-3 text-sm flex flex-col items-center rounded-full;
+            transition: all 0.3s;
+            text-shadow: 0 0 5px #fff;
+
+            &:hover {
+              background-color: rgb(208, 205, 205);
+            }
+
+            &:nth-child(2) {
+              @apply px-5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bullet {
+  bottom: 0 !important;
+
+  > span {
+    background-color: rgb(205, 196, 196);
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+  }
+}

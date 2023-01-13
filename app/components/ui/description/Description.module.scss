@@ -1,0 +1,12 @@
+.button {
+  @apply bg-bgColor transition-colors py-2 px-4 rounded-lg text-white text-lg;
+
+  box-shadow: 0 0 20px rgb(56, 56, 56);
+  transition: all 0.3s;
+
+  &:hover {
+    color: #000;
+    background-color: #9ca3af;
+    box-shadow: 0 0 20px rgb(179, 177, 177);
+  }
+}

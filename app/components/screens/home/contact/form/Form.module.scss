@@ -1,0 +1,46 @@
+.form {
+  @apply max-w-lg;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  > .row {
+    @apply flex flex-col;
+
+    > span {
+      @apply text-white text-sm font-normal mb-2;
+    }
+
+    > input {
+      padding-left: 2px;
+      padding-bottom: 8px;
+      color: #fff;
+      outline: none;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      transition: all 0.3s;
+
+      &.input-error {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+
+  > .error {
+    @apply text-red-500 text-xs mt-1 mb-2;
+    height: 16px;
+  }
+
+  > .button {
+    @apply text-white px-3 py-2 bg-bgColor rounded-lg block;
+    box-shadow: 0 0 20px rgb(56, 56, 56);
+    margin: 0 auto;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #000;
+      background-color: #9ca3af;
+      box-shadow: 0 0 20px rgb(179, 177, 177);
+    }
+  }
+}

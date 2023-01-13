@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  @apply bg-bgColor;
+
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(17 16 18) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Merriweather";
+  @apply bg-bgColor;
+  color: rgb(var(--foreground-rgb));
+  // background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #9ca3af;
+}
+
+::-webkit-scrollbar-thumb {
+  padding: 10px;
+  background-color: #e5111c;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1f4492;
+}

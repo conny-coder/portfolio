@@ -1,0 +1,106 @@
+.menu {
+  @media (max-width: 900px) {
+    @apply fixed top-0 left-0 right-0 bottom-0 flex flex-col gap-5 bg-slate-400 z-20;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    padding: 20px;
+    border-top: 60px solid #2a2828;
+    overflow-y: auto;
+    font-size: 1.5rem;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.menu-button {
+  @apply fixed z-30 top-6 right-6 w-5 flex flex-col justify-between;
+
+  &::after,
+  &::before,
+  > span {
+    box-shadow: 0 0 20px rgb(18, 17, 17);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: gray;
+    transition: all 0.3s;
+    transform-origin: 0 0 0;
+  }
+
+  &::before,
+  > span {
+    margin-bottom: 5px;
+  }
+
+  &.button-active {
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    > span {
+      opacity: 0;
+    }
+  }
+
+  @media (min-width: 901px) {
+    display: none;
+  }
+}
+
+.bubble {
+  @apply left-52 cursor-pointer z-20 top-8 w-10 h-10 text-white flex items-center justify-center rounded-full fixed;
+
+  > img {
+    @apply absolute left-0 top-0;
+    z-index: -1;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  > span:first-of-type {
+    @apply absolute -top-7 opacity-0 invisible transition-opacity;
+    white-space: nowrap;
+  }
+
+  &:nth-child(2) {
+    @apply top-20 left-48;
+  }
+
+  &:nth-child(3) {
+    @apply top-96 left-96;
+  }
+
+  &:nth-child(4) {
+    @apply top-28 left-96;
+  }
+
+  @media (max-width: 900px) {
+    @apply static h-auto w-auto;
+    justify-content: start;
+
+    > span:first-of-type {
+      @apply static opacity-100 visible;
+    }
+
+    > span:last-of-type {
+      display: none;
+    }
+  }
+
+  @media (min-width: 901px) {
+    &:hover {
+      box-shadow: 0 0 20px rgb(65, 160, 192);
+
+      > span:first-of-type {
+        @apply opacity-100 visible;
+      }
+    }
+  }
+}

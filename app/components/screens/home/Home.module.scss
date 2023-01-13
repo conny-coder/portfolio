@@ -1,0 +1,11 @@
+.section {
+  @apply relative overflow-hidden min-h-screen;
+
+  .animate-text {
+    @apply absolute top-5 left-5 z-0;
+  }
+
+  .container {
+    @apply mx-auto relative z-10 max-w-3xl;
+  }
+}

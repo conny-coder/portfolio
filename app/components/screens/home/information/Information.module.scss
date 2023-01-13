@@ -1,0 +1,50 @@
+.me {
+  margin-top: 22rem;
+  @apply mb-28 p-4 text-center bg-zinc-900 relative;
+
+  @media (max-width: 1200px) {
+    margin-top: 17rem;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 13rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 50px;
+    margin-top: 9rem;
+  }
+
+  .link {
+    @apply flex;
+
+    > div:first-child {
+      @apply relative ml-auto cursor-pointer;
+
+      @media (max-width: 600px) {
+        margin: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .image-wrapper {
+    @apply mb-6 flex justify-center;
+
+    > span {
+      margin-top: -3rem !important;
+    }
+
+    .image {
+      @apply rounded-full -mt-32;
+    }
+  }
+
+  .heading {
+    @apply pb-5 text-3xl flex justify-center items-center font-semibold text-white;
+
+    > span {
+      @apply mr-2;
+    }
+  }
+}

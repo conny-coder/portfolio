@@ -1,0 +1,112 @@
+.technologies {
+  width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  display: flex;
+  column-gap: 3.5rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    width: 200px;
+    height: 180px;
+    perspective: 3000px;
+    &:hover {
+      .item {
+        transform: rotateY(180deg);
+
+        .back .back-box {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .item {
+      transform-style: preserve-3d;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      transition: transform 0.8s;
+
+      > div {
+        @apply absolute h-full w-full rounded-2xl;
+      }
+
+      > .front {
+        cursor: default;
+        backface-visibility: hidden;
+        z-index: 1;
+        @apply flex flex-col gap-3 text-white p-5 items-center justify-center bg-bgColor;
+        box-shadow: 0 0 20px #000;
+      }
+
+      > .back {
+        cursor: default;
+        backface-visibility: hidden;
+        border-radius: 1.1rem;
+        background: #fff;
+        transform: rotateY(180deg);
+
+        > .inner {
+          padding: 1rem;
+          height: 100%;
+          gap: 0.7rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+
+          > span {
+            font-size: 32px;
+          }
+
+          .stars-wrapper {
+            gap: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            > span {
+              font-size: 24px;
+            }
+
+            .stars {
+              position: relative;
+              height: 30px;
+              width: 154px;
+
+              > div {
+                position: absolute;
+              }
+
+              .back-stars {
+                > .back-box {
+                  overflow: hidden;
+                  transition: width 1s;
+                  transition-delay: 0.1s;
+                  width: 10px;
+                  height: 30px;
+
+                  > div {
+                    width: 154px;
+                    height: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > span {
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
