@@ -10,15 +10,15 @@ export default async function postMail(
     port: 465,
     host: 'smtp.gmail.com',
     auth: {
-      user: 'kostia.shkambula@gmail.com',
-      pass: 'bkuygmuicsszmrix',
+      user: '@gmail.com',
+      pass: '******',
     },
     secure: true,
   })
 
   const mailData: Options = {
-    from: 'kostia.shkambula@gmail.com',
-    to: 'kostia.shkambula@gmail.com',
+    from: '@gmail.com',
+    to: '@gmail.com',
     subject: `Message From ${req.body.name}`,
     html: `<div>
 			<p>Message: ${req.body.message}</p>
