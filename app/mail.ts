@@ -2,10 +2,11 @@ import mailer from 'nodemailer'
 
 const smtpTransport = mailer.createTransport(
   {
-    service: 'gmail',
+    port: 465,
+    host: 'smtp.gmail.com',
     auth: {
       user: 'kostia.shkambula@gmail.com',
-      pass: 'fodabgqunpfgqehb',
+      pass: 'bkuygmuicsszmrix',
     },
   },
   {
