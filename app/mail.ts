@@ -8,9 +8,7 @@ const smtpTransport = mailer.createTransport(
       user: 'kostia.shkambula@gmail.com',
       pass: 'bkuygmuicsszmrix',
     },
-  },
-  {
-    from: 'User <user@gmail.com>',
+    secure: true
   }
 )
 
