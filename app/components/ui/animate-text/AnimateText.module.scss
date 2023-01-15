@@ -1,5 +1,6 @@
 .text {
-  @apply text-gray-400 font-bold max-w-6xl;
+  @apply text-gray-400 font-bold;
+  max-width: 50vw;
   font-size: 12vw;
   line-height: 1;
 }

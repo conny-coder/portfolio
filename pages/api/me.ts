@@ -1,6 +1,5 @@
 const me = {
   siteName: 'Portfolio',
-  avatar: '/avatar.jpg',
   description: 'About me',
 }
 

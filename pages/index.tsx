@@ -2,12 +2,12 @@ import axios from 'axios'
 import { GetStaticProps } from 'next'
 import Home from '../app/components/screens/home/Home'
 import { API_URL } from '../app/constants'
-import { getProps } from '../app/load'
 import { HomeProps } from '../app/types/about-me'
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const { projects, technologies } = await getProps()
+    const { data: projects } = await axios.get(`${API_URL}/projects/`)
+    const { data: technologies } = await axios.get(`${API_URL}/technologies/`)
 
     if (!projects || !technologies) {
       return {

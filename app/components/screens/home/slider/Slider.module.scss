@@ -8,7 +8,8 @@
   .slide {
     border-radius: 1rem;
     overflow: hidden;
-    // box-shadow: 0 0 15px #515458;
+    box-shadow: 0 0 15px #515458;
+    margin-top: 10px;
 
     @media (max-width: 600px) {
       margin-left: 10px !important;

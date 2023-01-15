@@ -3,7 +3,6 @@ import { IProject } from './project'
 
 export interface IAboutMe {
   siteName: string
-  avatar: string
   description: string
 }
 

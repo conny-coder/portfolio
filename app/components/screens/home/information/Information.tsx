@@ -17,14 +17,12 @@ const Information = () => {
         <Description />
       </div>
       <div className={styles['image-wrapper']}>
-        {me && (
-          <img
-            src={`${APP_URL}${me.avatar}`}
-            width={190}
-            height={190}
-            className={styles.image}
-          />
-        )}
+        <img
+          src={`${APP_URL}/avatar.jpg`}
+          width={190}
+          height={190}
+          className={styles.image}
+        />
       </div>
       <div className={styles.heading}>
         <span>Conny</span>

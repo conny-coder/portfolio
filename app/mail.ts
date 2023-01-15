@@ -1,27 +1,42 @@
+import { NextApiRequest, NextApiResponse } from 'next'
 import mailer from 'nodemailer'
+import { Options } from 'nodemailer/lib/mailer'
 
-const smtpTransport = mailer.createTransport(
-  {
-    service: 'gmail',
+export default async function postMail(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const transporter = await mailer.createTransport({
+    port: 465,
+    host: 'smtp.gmail.com',
     auth: {
-      user: 'kostia.shkambula@gmail.com',
-      pass: 'fodabgqunpfgqehb',
+      user: '@gmail.com',
+      pass: '*******',
     },
-  },
-  {
-    from: 'User <user@gmail.com>',
-  }
-)
-
-const sendEmail = (message: any) => {
-  smtpTransport.sendMail(message, function (error, info) {
-    if (error) {
-      console.log(error)
-    } else {
-      console.log('Email sent successfully', info)
-    }
-    smtpTransport.close()
+    secure: true,
   })
-}
 
-export default sendEmail
+  const mailData: Options = {
+    from: '@gmail.com',
+    to: '@gmail.com',
+    subject: `Message From ${req.body.name}`,
+    html: `<div>
+			<p>Message: ${req.body.message}</p>
+			<p>Sender: ${req.body.email}</p>
+    </div>`,
+  }
+
+  try {
+    transporter.sendMail(mailData, (err) => {
+      if (err) {
+        console.error(err)
+        res.send('error' + String(err))
+      } else {
+        res.status(200).send('Success!')
+      }
+    })
+  } catch (error) {
+    console.error(error)
+    res.send('Failed!')
+  }
+}

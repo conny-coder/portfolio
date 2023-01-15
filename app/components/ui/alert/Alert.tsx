@@ -14,11 +14,9 @@ const Alert: FC<{ isShow: boolean; setIsShow: any }> = ({
       opacity -= 0.004
       ref.current.style.opacity = opacity
       if (opacity <= 0) {
-        console.log(1)
         clearInterval(interval)
         setIsShow(false)
       }
-      console.log(2)
     }, 10)
   }
 
