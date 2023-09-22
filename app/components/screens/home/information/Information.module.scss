@@ -36,7 +36,8 @@
     }
 
     .image {
-      @apply rounded-full -mt-32;
+      @apply -mt-32;
+      border-radius: 50%;
     }
   }
 

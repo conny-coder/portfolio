@@ -36,7 +36,7 @@ const SliderItem: FC<{ project: IProject }> = ({
               className={styles['button-git']}
             >
               <img
-                src={`${APP_URL}/icons/view.svg`}
+                src={`${APP_URL}/icons/view.png`}
                 alt=''
                 width={32}
                 height={32}

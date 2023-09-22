@@ -7,7 +7,7 @@ const technologies = [
   },
   {
     image: 'sass.svg',
-    stars: 4.5,
+    stars: 5.0,
     name: 'SCSS/SASS',
   },
   {
@@ -18,31 +18,31 @@ const technologies = [
   {
     image: 'express.svg',
     title: 'Express',
-    stars: 3.5,
+    stars: 3.0,
     name: 'Express',
   },
   {
     image: 'nest.svg',
     title: 'NestJS',
-    stars: 4.0,
+    stars: 3.5,
     name: 'NestJS',
   },
   {
     image: 'next.svg',
     title: 'Next.js',
-    stars: 4.2,
+    stars: 3.7,
     name: 'Next.js',
   },
   {
     image: 'node.svg',
     title: 'Node.js',
-    stars: 4.0,
+    stars: 3.2,
     name: 'Node.js',
   },
   {
     image: 'react.svg',
     title: 'React',
-    stars: 4.6,
+    stars: 3.6,
     name: 'React',
   },
   {
@@ -53,7 +53,7 @@ const technologies = [
   {
     image: 'redux.svg',
     title: 'React redux',
-    stars: 4.3,
+    stars: 3.8,
     name: 'Redux',
   },
   {
@@ -61,6 +61,12 @@ const technologies = [
     title: 'Git',
     stars: 4.5,
     name: 'Git',
+  },
+  {
+    image: 'wordpress.svg',
+    title: 'Wordpress',
+    stars: 4.2,
+    name: 'Wordpress',
   },
 ]
 

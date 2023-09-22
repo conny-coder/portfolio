@@ -1,15 +1,12 @@
-import { FC } from 'react'
 import { APP_URL } from '../../../../constants'
 import Description from '../../../ui/description/Description'
 import Modal from '../../../ui/modal/Modal'
 import SocialButtons from '../social/SocialButtons'
 import styles from './Information.module.scss'
-import { useMe } from './useMe'
-import { useSocials } from './useSocials'
+import { socialInformation } from './socials'
 
 const Information = () => {
-  const me = useMe()
-  const socials = useSocials()
+  const socials = socialInformation
 
   return (
     <div className={styles.me}>
@@ -18,9 +15,9 @@ const Information = () => {
       </div>
       <div className={styles['image-wrapper']}>
         <img
-          src={`${APP_URL}/avatar.jpg`}
+          src={`${APP_URL}/avatar.webp`}
           width={190}
-          height={190}
+          height={170}
           className={styles.image}
         />
       </div>
